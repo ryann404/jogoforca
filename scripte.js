@@ -3,7 +3,7 @@ let telaDescartados = document.getElementById('saidaDescartados')
 let campoDigito = document.getElementById('inpChute')
 let btnTestar = document.getElementById('btnEnviar')
 let statusMensagem = document.querySelector('#status')
-
+let body = document.querySelector('body')
 
 
 let listaNomes = [
@@ -33,13 +33,13 @@ for (let i = 0; i < codigoSecreto.length; i++){
 
 
 let codigo = document.getElementById('saidaPalavraOculta')
-// codigo.innerHTML = codigoOculto.join(" ")
-
+codigo.innerHTML = codigoOculto.join(" ")
 
 btnTestar.addEventListener("click", testarCodigo)
 
 function testarCodigo(){
     if(tentativasRestantes <= 0){
+        body.style.background = "#acacac"
         return
     }
     let digito = campoDigito.value
