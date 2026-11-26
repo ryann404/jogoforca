@@ -5,6 +5,31 @@ let btnTestar = document.getElementById('btnEnviar')
 let statusMensagem = document.querySelector('#status')
 let body = document.querySelector('body')
 
+let btnReinicio = document.getElementById('reinicio')
+
+btnReinicio.addEventListener("click", function(){
+    codigoSecreto = listaNomes[Math.floor(Math.random() * listaNomes.length)]
+    tentativasRestantes = 6
+    codigoOculto = []
+
+    for (let i = 0; i < codigoSecreto.length; i++){
+        codigoOculto.push("*")
+    }
+
+    codigo.innerText = codigoOculto.join(" ")
+    telaTentativas.innerText = "Tentativas: " + tentativasRestantes
+    telaDescartados.innerText = ""
+    statusMensagem.innerHTML = ""
+    body.style.background = ""
+
+    for (let i = 0; i < partesBoneco.length; i++){
+        document.getElementById(partesBoneco[i]).style.display = "none"
+    }
+
+    btnTestar.disabled = false
+    campoDigito.disabled = false
+    campoDigito.focus()
+})
 
 let listaNomes = [
     "abacaxi",
@@ -74,7 +99,7 @@ function testarCodigo(){
         codigo.innerText = codigoOculto.join(" ")
     } else{
         tentativasRestantes--
-        telaTentativas.innerText = tentativasRestantes
+        telaTentativas.innerText = "Tentativas: " + tentativasRestantes
         telaDescartados.innerText += `${digito}`
 
         // NOVO: mostra a próxima parte do boneco
