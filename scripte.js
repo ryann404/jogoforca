@@ -39,7 +39,7 @@ btnTestar.addEventListener("click", testarCodigo)
 
 function testarCodigo(){
     if(tentativasRestantes <= 0){
-        body.style.background = "#acacac"
+
         return
     }
     let digito = campoDigito.value
@@ -72,14 +72,16 @@ function testarCodigo(){
         let erros = partesBoneco.length - tentativasRestantes
         document.getElementById(partesBoneco[erros - 1]).style.display = "inline"
     }
-    }
-
+    
     if(tentativasRestantes <= 0) {
         statusMensagem.innerHTML = `<p style="color: red;"><strong>Ish...</strong>`
         btnTestar.disabled = true
+        body.style.background = "#acacac"
         campoDigito.disabled = true
     } else if(!codigoOculto.includes("*")){
         statusMensagem.innerHTML = `<p style="color: blue;"><strong>Você foi salvo!</strong>`
         btnTestar.disable = true
         campoDigito.disable = true
     }
+
+}
