@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <h1>JOGO DA FORCA</h1>
+    <h2>TESTE SUA INTUIÇÃO!</h2>
+    <h4 id="saidaPalavraOculta">Palavra: </h4>
+    <h3 id="saidaTentativas">Tentativas: </h3>
+    <svg id="boneco" width="150" height="200" viewBox="0 0 150 200">
+    <!-- forca (sempre visível) -->
+    <line x1="10" y1="190" x2="110" y2="190" stroke="black" stroke-width="3"/>
+    <line x1="30" y1="190" x2="30" y2="10" stroke="black" stroke-width="3"/>
+    <line x1="30" y1="10" x2="90" y2="10" stroke="black" stroke-width="3"/>
+    <line x1="90" y1="10" x2="90" y2="35" stroke="black" stroke-width="3"/>
+
+    <!-- partes do boneco (começam escondidas) -->
+    <circle id="cabeca" cx="90" cy="50" r="15" stroke="black" stroke-width="3" fill="none" style="display:none"/>
+    <line id="corpo" x1="90" y1="65" x2="90" y2="120" stroke="black" stroke-width="3" style="display:none"/>
+    <line id="bracoEsq" x1="90" y1="80" x2="65" y2="100" stroke="black" stroke-width="3" style="display:none"/>
+    <line id="bracoDir" x1="90" y1="80" x2="115" y2="100" stroke="black" stroke-width="3" style="display:none"/>
+    <line id="pernaEsq" x1="90" y1="120" x2="70" y2="155" stroke="black" stroke-width="3" style="display:none"/>
+    <line id="pernaDir" x1="90" y1="120" x2="110" y2="155" stroke="black" stroke-width="3" style="display:none"/>
+</svg>
+    <input type="text" maxlength="1" id="inpChute">
+    <button type="submit" id="btnEnviar">Enviar</button>
+    <p id="saidaDescartados"></p>
+    <p id="status"></p>
+    <script src="scripte.js"></script>
+</body>
+</html>
