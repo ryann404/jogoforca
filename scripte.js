@@ -39,6 +39,9 @@ let codigo = document.getElementById('saidaPalavraOculta')
 btnTestar.addEventListener("click", testarCodigo)
 
 function testarCodigo(){
+    if(tentativasRestantes <= 0){
+        return
+    }
     let digito = campoDigito.value
     // pega o texto que o usuario digita
     campoDigito.value = ""
@@ -74,8 +77,9 @@ function testarCodigo(){
     if(tentativasRestantes <= 0) {
         statusMensagem.innerHTML = `<p style="color: red;"><strong>Ish...</strong>`
         btnTestar.disabled = true
-
+        campoDigito.disabled = true
     } else if(!codigoOculto.includes("*")){
         statusMensagem.innerHTML = `<p style="color: blue;"><strong>Você foi salvo!</strong>`
-        btnTestar.disabled = true
+        btnTestar.disable = true
+        campoDigito.disable = true
     }
