@@ -19,7 +19,24 @@
             text-align: center;
             font-family: "JetBrains Mono", monospace;
         }
-        
+        input{
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            border: 0;
+            color: black;
+            outline: none;
+            padding-left: 5px
+        }
+        button{
+            border: 0;
+            height: 30px;
+            width: 50px;
+            border-radius: 5px;
+            transition: 0.4s ease-in-out;
+            padding: 5px;
+            padding-left: 5px;
+        }
     </style>
     <h1>JOGO DA FORCA</h1>
     <h2>TESTE SUA INTUIÇÃO!</h2>
@@ -40,6 +57,7 @@
     <line id="pernaEsq" x1="90" y1="120" x2="70" y2="155" stroke="black" stroke-width="3" style="display:none"/>
     <line id="pernaDir" x1="90" y1="120" x2="110" y2="155" stroke="black" stroke-width="3" style="display:none"/>
 </svg>
+<br>
     <input type="text" maxlength="1" id="inpChute">
     <button type="submit" id="btnEnviar">Enviar</button>
     <p id="saidaDescartados"></p>
