@@ -12,10 +12,19 @@ let listaNomes = [
     "betoneira",
     "maquina-removedora-de-lona-de-freio",
     "violeta",
-    "nome"
+    "nome",
+    "crazy-frog",
+    "armario",
+    "coisa",
+    "cair",
+    "segredo",
+    "bomba",
+    "coruja",
+    "piscina",
+    "dez",
 ]
 
-let codigoSecreto = Math.round(Math.random() * 5)
+let codigoSecreto = Math.round(Math.random() * 14)
 // selecionando numero entre 0 e 3, aprendi essa cm o jogo do jairo
 codigoSecreto = listaNomes[codigoSecreto]
 
